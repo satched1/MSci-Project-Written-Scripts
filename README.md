@@ -1,4 +1,4 @@
-This repository provides various example LAMMPS simulation files as well as all scripts written by me as part of the project.
+Within the master_scripts_file, this repository provides various example LAMMPS simulation files as well as all scripts written by me as part of the project.
 
 
 The 1_lammps_file_setup fodler contains scripts that help setup files for LAMMPS simulations:
