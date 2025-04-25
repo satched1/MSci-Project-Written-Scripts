@@ -1,0 +1,40 @@
+
+log             log.logfile_frame_0
+units           real
+atom_style      full
+dimension        3
+newton           on
+boundary        p p p
+
+
+bond_style hybrid harmonic
+angle_style hybrid harmonic
+dihedral_style hybrid fourier
+improper_style cvff
+special_bonds lj 0.0 0.0 0.5 coul 0.0 0.0 0.8333333333
+
+# Non-bonded interactions in Sage force field
+pair_style lj/cut/coul/long 9.0 9.0
+pair_modify mix arithmetic tail yes
+
+# Load the parameterized system from .data file
+read_data ../lammps_input_files/lammps_input_data_frame_0.data
+
+# Output control
+dump lammpstrj_dump all atom 50000 lammps_output_lammpstrj_frame_0.lammpstrj
+thermo_style custom step etotal pe ke temp press lx ly lz vol density
+thermo 50000
+
+# PME electrostatics in Sage force field
+kspace_style pppm 1e-5
+
+# energy minimisation to bring atoms to a more sensible state, outputs initial energy of system in logfile, which is the desired conformer energy
+minimize 1.0e-4 1.0e-6 2500 25000 
+
+# Output
+compute pe all pe/atom
+compute pair all pe/atom pair
+compute bond all pe/atom bond
+compute angle all pe/atom angle
+compute dihedral all pe/atom dihedral
+compute improper all pe/atom improper

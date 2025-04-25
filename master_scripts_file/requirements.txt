@@ -1,0 +1,51 @@
+# For script.py and SPE_script.py files
+espaloma_charge==0.0.8
+numpy==1.26.4
+openff-interchange==0.4.0
+openff-toolkit==0.16.7
+openff-units==0.2.2
+openmm==8.2.0
+rdkit==2024.03.4
+stk==2024.10.2.0
+
+# For z1_lammps_script_generation.ipynb files
+LAMMPS must be installed if one desires to run a short LAMMPS simulation on a local laptop
+
+# For z2_simulation_stability.ipynb files
+matplotlib==3.9.2
+numpy==1.26.4
+scipy==1.14.1
+
+# For z3_convert_lammstring_to_xyz.ipynb files
+MDAnalysis==2.8.0
+
+# For z4_pore_volumes_script.ipynb files
+matplotlib==3.9.2
+MDAnalysis==2.8.0
+numpy==1.26.4
+pywindow
+scipy==1.14.1
+stk==2024.10.2.0
+
+# For z5_solvent_inside_or_outside_cage.ipynb files
+matplotlib==3.9.2
+MDAnalysis==2.8.0
+numpy==1.26.4
+pywindow
+rdkit==2024.3.6
+scipy==1.14.1
+stk==2024.10.2.0
+
+# For z6_symmetry_script.ipynb files
+matplotlib==3.8.4
+MDAnalysis==2.8.0
+numpy==1.26.4
+py3Dmol==2.4.0
+pywindow
+rdkit==2024.3.4
+scipy==1.13.1
+stk==2024.10.2.0
+stko==2024.10.12.0
+
+# For z8_SPE_script.ipynb files
+scipy==1.13.1
