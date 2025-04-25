@@ -1,0 +1,74 @@
+
+log             log.logfile
+units           real
+atom_style      full
+dimension        3
+newton           on
+boundary        p p p
+
+
+bond_style hybrid harmonic
+angle_style hybrid harmonic
+dihedral_style hybrid fourier
+improper_style cvff
+special_bonds lj 0.0 0.0 0.5 coul 0.0 0.0 0.8333333333
+
+# Non-bonded interactions in Sage force field
+pair_style lj/cut/coul/long 9.0 9.0
+pair_modify mix arithmetic tail yes
+
+# Load the parameterized system from .data file
+read_data lammps_input_data.data
+
+# Thermostat and velocity generation
+# fix 3 all nvt temp 298.0 298.0 300
+fix 3 all npt temp 298.0 298.0 100.0 iso 1.0 1.0 1000.0 # pressure unit atm, temp unit Kelvin, time unit fs
+velocity all create 298.0 4928459 rot yes dist gaussian
+
+# Output control
+#dump dcd_dump all dcd 50000 lammps_output_dcd.dcd
+#dump xyz_dump all xyz 50000 lammps_output_xyz.xyz
+dump lammpstrj_dump all atom 50000 lammps_output_lammpstrj.lammpstrj
+thermo_style custom step etotal pe ke temp press lx ly lz vol density
+thermo 50000
+
+#thermo_style custom ebond eangle edihed eimp epair evdwl ecoul elong etail pe
+# PME electrostatics in Sage force field
+kspace_style pppm 1e-5
+#kspace_modify mesh 64 64 64  #Automesh as default
+
+
+#preliminary energy minimisation to bring atoms to a more sensible state, done at 0 K by default?
+minimize 1.0e-4 1.0e-6 100 1000
+
+# Run for X steps at 1 fs δt
+timestep 1
+run_style          verlet # verlet is standard for nvt, what about npt??
+run 10000000
+
+unfix 3
+
+# npt to get reasoable box size then nvt to get better enrgetics info??
+# fix 4 .... add in second sim if desired
+#fix 4 all nvt temp 298.0 298.0 300
+#dump lammpstrj_dump_2 all atom 50000 trajectory_2.lammpstrj
+#thermo_style custom step etotal pe ke temp press lx ly lz vol density
+#thermo 50000
+#kspace_style pppm 1e-5
+#timestep 1
+#run_style          verlet # verlet is standard for nvt, what about npt??
+#run 10000000
+#unfix 4
+
+# Output
+compute pe all pe/atom
+compute pair all pe/atom pair
+compute bond all pe/atom bond
+compute angle all pe/atom angle
+compute dihedral all pe/atom dihedral
+compute improper all pe/atom improper
+
+# Settings
+#dielectric         1.0
+#neighbor           2.0 bin
+#neigh_modify       delay 0 every 1 check yes page 10000000 one 10000
