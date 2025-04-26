@@ -51,7 +51,7 @@ cage over a series of frames of a simulation:
     conformer energy analysis.
     - SPE_script.py - A python script for the setup of the LAMMPS input .data files that are required to run a 
     simulation. One .data file is produced for each frame that is evaluated.
-    - z8_SPE_script.ipynb - A jupyter notebook that extracts the conformer energies of the cage from the ouput
+    - z8_SPE_script.ipynb - A jupyter notebook that extracts the conformer energies of the cage from the output
     LAMMPS logfiles and plots them against time.
 
 
