@@ -1,7 +1,7 @@
 This text file outlines the structure of the scripts and files presented in this GitHub.
 
 
-he 1_lammps_file_setup folder contains scripts that help setup files for LAMMPS simulations:
+The 1_lammps_file_setup folder contains scripts that help setup files for LAMMPS simulations:
     - script.py - A python script for the setup of a LAMMPS input .data file that is required to run a 
     simulation.
     - z1_lammps_script_generation.ipynb - A jupyter notebook that is able to easily write and create a LAMMPS
