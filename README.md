@@ -2,6 +2,7 @@ Within the master_scripts_file, this repository provides various example LAMMPS 
 
 
 The 1_lammps_file_setup folder contains scripts that help setup files for LAMMPS simulations:
+
     - script.py - A python script for the setup of a LAMMPS input .data file that is required to run a 
     simulation.
     - z1_lammps_script_generation.ipynb - A jupyter notebook that is able to easily write and create a LAMMPS
@@ -10,12 +11,14 @@ The 1_lammps_file_setup folder contains scripts that help setup files for LAMMPS
 
 
 The 2_lammps_simulation_inputs folder contains example input files for LAMMPS simulations:
+
     - input.in - An example LAMMPS input .in file.
     - job.sh - An example job submission .sh file.
     - lammps_input_data.data - An example LAMMPS input .data file for a CC3 cage in dichloromethane solvent.
 
 
 The 3_analysis_scripts folder contains scripts related to the analysis of the simulations:
+
     - z2_simulation_stability_script.ipynb - A jupyter notebook that extracts simulation data from the LAMMPS
     output logfile and plots graphs against time.
     - z3_convert_lammstring_to_xyz.ipynb - A jupyter notebook that converts the output LAMMPS .lammstrj file
@@ -40,6 +43,7 @@ The 3_analysis_scripts folder contains scripts related to the analysis of the si
 
 The 4_conformer_energy_analysis folder contains files related to the analysis of the conformer energy of the 
 cage over a series of frames of a simulation:
+
     - input_frame_0.in - An example LAMMPS input .in file for a single frame that is evaluated for cage 
     conformer energy analysis. A short minimisation is run here as it provides the initial energy of the 
     system (the cage), which is the conformer energy of the cage for a given frame.
@@ -56,6 +60,7 @@ in this repository.
 
 
 Here are details on the .xyz files that can be outputted from the written scripts:
+
     - Files from the z3_convert_lammstring_to_xyz.ipynb:
         - data_all_atoms_unwrapped.xyz - xyz file containing coordinate information for all atoms for each 
         frame in an unwrapped coordinate style.
