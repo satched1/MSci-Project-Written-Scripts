@@ -1,7 +1,7 @@
 Within the master_scripts_file, this repository provides various example LAMMPS simulation files as well as all scripts written by me as part of the project.
 
 
-he 1_lammps_file_setup folder contains scripts that help setup files for LAMMPS simulations:
+The 1_lammps_file_setup folder contains scripts that help setup files for LAMMPS simulations:
     - script.py - A python script for the setup of a LAMMPS input .data file that is required to run a 
     simulation.
     - z1_lammps_script_generation.ipynb - A jupyter notebook that is able to easily write and create a LAMMPS
