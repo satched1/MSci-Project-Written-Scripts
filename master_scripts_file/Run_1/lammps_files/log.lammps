@@ -1,0 +1,4 @@
+LAMMPS (11 Aug 2017)
+  using 1 OpenMP thread(s) per MPI task
+
+log             log.logfile
