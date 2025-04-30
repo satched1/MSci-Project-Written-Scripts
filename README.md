@@ -105,6 +105,7 @@ Here are details on the .xyz files that can be outputted from the written script
         blocks of the cage for each frame.
 
 Here are details on the LAMMPS files within the Run_1 folder:
+
     - input.in - LAMMPS input .in file detailing the setup of simulation.
     - job.sh - A job submission .sh file.
     - lammps_input_data.data - LAMMPS input .data file for a CC3 [4+6] cage in dichloromethane solvent.
