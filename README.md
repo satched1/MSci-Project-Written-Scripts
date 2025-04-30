@@ -104,3 +104,13 @@ Here are details on the .xyz files that can be outputted from the written script
         - coms_tritopic_bbs.xyz - xyz file containing centre of mass information for the tritopic building 
         blocks of the cage for each frame.
 
+Here are details on the LAMMPS files within the Run_1 folder:
+    - input.in - LAMMPS input .in file detailing the setup of simulation.
+    - job.sh - A job submission .sh file.
+    - lammps_input_data.data - LAMMPS input .data file for a CC3 [4+6] cage in dichloromethane solvent.
+    - lammps_output_lammstrj.lammpstrj - LAMMPS output file providing atomic coordinates for every atom
+    for every frame of the simulation.
+    - log.logile - logfile for the LAMMPS simulation.
+    - log. lammps - logfile for the use of LAMMPS.
+    - two annealing files - output files from the Imperial Research Computing Service whenever a simulation
+    is run. These files provide the same information as the two logfiles.
