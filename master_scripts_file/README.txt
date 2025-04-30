@@ -51,6 +51,10 @@ cage over a series of frames of a simulation:
     LAMMPS logfiles and plots them against time.
 
 
+The Run_1 folder is an example folder for a simulation of CC3 [4+6] in DCM solvent. Executed scripts are 
+provided as well as example LAMMPS files and output script .xyz files, the names of which are detailed below.
+
+
 The requirements.txt file contains the packages and the versions used for the .ipynb and .py files presented 
 in this repository.
 
