@@ -1,4 +1,5 @@
-Within the master_scripts_file, this repository provides various example LAMMPS simulation files as well as all scripts written by me as part of the project.
+Within the master_scripts_file, this repository provides various example LAMMPS simulation files as well as 
+all scripts written by me as part of the project.
 
 
 The 1_lammps_file_setup folder contains scripts that help setup files for LAMMPS simulations:
@@ -53,6 +54,10 @@ cage over a series of frames of a simulation:
     simulation. One .data file is produced for each frame that is evaluated.
     - z8_SPE_script.ipynb - A jupyter notebook that extracts the conformer energies of the cage from the output
     LAMMPS logfiles and plots them against time.
+
+
+The Run_1 folder is an example folder for a simulation of CC3 [4+6] in DCM solvent. Executed scripts are 
+provided as well as example LAMMPS files and output script .xyz files, the names of which are detailed below.
 
 
 The requirements.txt file contains the packages and the versions used for the .ipynb and .py files presented 
